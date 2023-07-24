@@ -1,15 +1,15 @@
-import ScrollSuave from "./modules/scroll-suave.js";
-import TabNav from "./modules/tab-nav.js";
-import Accordion from "./modules/accordion.js";
-import Modal from "./modules/modal.js";
-import Tooltip from "./modules/tooltip.js";
-import DropDownMenu from "./modules/dropdown-menu.js";
-import MenuMobile from "./modules/menu-mobile.js";
-import Funcionamento from "./modules/funcionamento.js";
-import fetchAnimais from "./modules/fetch-animais.js";
-import fetchBitcoin from "./modules/fetch-bitcoin.js";
-import ScrollAnima from "./modules/scroll-animacao.js";
-import { SlideNav } from "./modules/slide.js";
+import ScrollSuave from './modules/scroll-suave.js';
+import TabNav from './modules/tab-nav.js';
+import Accordion from './modules/accordion.js';
+import Modal from './modules/modal.js';
+import Tooltip from './modules/tooltip.js';
+import DropDownMenu from './modules/dropdown-menu.js';
+import MenuMobile from './modules/menu-mobile.js';
+import Funcionamento from './modules/funcionamento.js';
+import fetchAnimais from './modules/fetch-animais.js';
+import fetchBitcoin from './modules/fetch-bitcoin.js';
+import ScrollAnima from './modules/scroll-animacao.js';
+import { SlideNav } from './modules/slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -19,36 +19,36 @@ accordion.init();
 
 const tabnav = new TabNav(
   "[data-tab='menu'] li",
-  "[data-tab='content'] section"
+  "[data-tab='content'] section",
 );
 tabnav.init();
 
 const modal = new Modal(
   "[data-modal='abrir'",
   "[data-modal='fechar'",
-  "[data-modal='container'"
+  "[data-modal='container'",
 );
 
 modal.init();
 
-const tooltip = new Tooltip("[data-tooltip]");
+const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
 const scrollanima = new ScrollAnima("[data-anime='scroll']");
 scrollanima.init();
 
-const dropdownmenu = new DropDownMenu("[data-dropdown]");
+const dropdownmenu = new DropDownMenu('[data-dropdown]');
 dropdownmenu.init();
 
 const menumobile = new MenuMobile("[data-menu='button'", "[data-menu='list'");
 menumobile.init();
 
-const funcionamento = new Funcionamento("[data-semana]");
+const funcionamento = new Funcionamento('[data-semana]');
 funcionamento.init();
 
-fetchAnimais("./animaisapi.json", ".numeros-grid");
-fetchBitcoin(".btc-preco");
+fetchAnimais('./animaisapi.json', '.numeros-grid');
+fetchBitcoin('.btc-preco');
 
-const slide = new SlideNav(".slide", ".slide-wrapper");
+const slide = new SlideNav('.slide', '.slide-wrapper');
 slide.init();
-slide.addControl(".custom-controls");
+slide.addControl('.custom-controls');
